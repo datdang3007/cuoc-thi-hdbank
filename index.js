@@ -98,7 +98,7 @@ RenderLoginPage = (layout) => {
                 <div class="logo-ct-bank col-12" style="position:absolute; top:0px; left:0px; height: 100px">
                     <div class="img-logo-ctbank-big" style="background-size: 80px;"></div>
                 </div>
-                <div class="form-login col-12 d-flex align-items-center justify-content-center">
+                <div class="form-login col-12 d-flex align-items-center justify-content-center" style="height: 600px">
                     <div class="form-login-content">
                         <div class="header-form-login-content">
                             <h1 class="title-welcome" style="font-size: 7vw;">CTBank kính chào!</h1>
