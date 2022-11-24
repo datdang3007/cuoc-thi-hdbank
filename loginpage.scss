@@ -1,0 +1,158 @@
+.row-login-page {
+    
+    .logo-ct-bank {
+        background: linear-gradient(to top, rgb(9, 51, 99), rgb(18, 135, 202));
+        .img-logo-ctbank-big {
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/logoCTBankBig.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 80%;
+        }
+    }
+    .form-login {
+        height: 100%;
+        min-height: 700px;
+        .img-decor-form-login {
+            position: absolute;
+            right: 2.5%;
+            bottom: 3.5%;
+            width: 180px;
+            height: 180px;
+            background-image: url(/images/iconDecor1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            p {
+                position: absolute;
+                width: 155px;
+                top: 96.5%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: rgb(75,75,75);
+                font-size: 13px;
+                font-weight: 600;
+                font-family: 'Noto Sans', sans-serif;
+            }
+        }
+        .form-login-content {
+            position: relative;
+            width: 80%;
+            text-align: center;
+            .header-form-login-content {
+                .title-welcome {
+                    color: rgb(17, 84, 161);
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    font-family: 'Noto Sans', sans-serif;
+                }
+                .title-signup {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: rgb(100,100,100);
+                    font-family: 'Noto Sans', sans-serif;
+                    a {
+                        font-weight: 600;
+                        border-bottom: 1px solid;
+                    }
+                }
+            }
+            form {
+                min-width: 280px;
+                max-width: 530px;
+                margin: 0 auto;
+                .form-group-login {
+                    text-align: left;
+                    .form-login-label {
+                        margin-left: 6px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: rgb(100,100,100);
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                    .form-login-input {
+                        font-size: 14px;
+                        font-family: 'Noto Sans', sans-serif;
+                        border: 1.5px solid #ced4da;
+                    }
+                }
+                .form-group-checkbox {
+                    text-align: left;
+                    .form-group-checkbox-rememberme-label {
+                        color: rgb(100,100,100);
+                        font-size: 12px;
+                        font-family: 'Noto Sans', sans-serif;
+                    }
+                }
+                .btn-login-form {
+                    position: relative;
+                    color: #fff;
+                    font-family: 'Noto Sans', sans-serif;
+                    width: 100%;
+                    min-width: 280px;
+                    max-width: 530px;
+                    background-color: rgb(18, 135, 202);
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 15px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LOGIN WITH FB OR GOOGLE (Child of .login-form)
+
+// .title-login-with-another {
+//     position: relative;
+//     display: inline-block;
+//     color: rgb(100,100,100);
+//     font-family: 'Noto Sans', sans-serif;
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 50%;
+//         width: 47.5%;
+//         height: 1px;
+//         transform: translateX(-110%);
+//         background-color: rgb(100,100,100);
+//     }
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         top: 50%;
+//         right: 0px;
+//         width: 47.5%;
+//         height: 1px;
+//         transform: translateX(110%);
+//         background-color: rgb(100,100,100);
+//     }
+// }
+
+// .group-another-login {
+//     width: 32.5%;
+//     margin: 0 auto;
+//     .btn-another-login {
+//         color: #fff;
+//         padding: 10px 0px;
+//         width: 45%;
+//         height: 50px;
+//         border: 1.5px solid rgb(18, 175, 238);
+//         &.bg-fb {
+//             background: rgba(15, 132, 179, 0.2) url(/images/logoFB.png);
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: 30px;
+//         }
+//         &.bg-google {
+//             background: rgba(15, 132, 179, 0.2) url(/images/logoGoogle.png);
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: 30px;
+//         }
+//     }
+// }
