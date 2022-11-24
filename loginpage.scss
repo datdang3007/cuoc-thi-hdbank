@@ -105,6 +105,18 @@
     }
 }
 
+.loading-animation {
+    position: absolute;
+    // display: none;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 40px;
+    color: rgb(18, 135, 202);
+    animation: 1.35s linear infinite loading;
+}
+
 // LOGIN WITH FB OR GOOGLE (Child of .login-form)
 
 // .title-login-with-another {
@@ -156,3 +168,12 @@
 //         }
 //     }
 // }
+
+@keyframes loading {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }

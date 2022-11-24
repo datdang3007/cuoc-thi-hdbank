@@ -1,5 +1,12 @@
 var currentType = ''
 
+LoadingDelay = (timeout) => {
+    $('.loading-animation').fadeIn(300);
+    setTimeout(() => {
+        $('.loading-animation').fadeOut(300);
+    }, timeout);
+}
+
 RenderLoginPage = (layout) => {
     if (layout == "large") {
         var base = `
@@ -47,7 +54,7 @@ RenderLoginPage = (layout) => {
                 </div>
             </div>
         `
-        $('body').html(base);
+        $('.page').html(base);
     } else if (layout == "medium") {
         var base = `
             <div class="row row-login-page w-100" style="height: 100vh">
@@ -91,7 +98,7 @@ RenderLoginPage = (layout) => {
                 </div>
             </div>
         `
-        $('body').html(base);
+        $('.page').html(base);
     } else if (layout == "small") {
         var base = `
             <div class="row row-login-page w-100" style="height: 650px">
@@ -135,7 +142,7 @@ RenderLoginPage = (layout) => {
                 </div>
             </div>
         `
-        $('body').html(base);
+        $('.page').html(base);
     };
 };
 
@@ -155,7 +162,14 @@ checkDisplayWidth = () => {
 
 // Khi trang web mới load xong:
 $(window).ready(() => {
-    checkDisplayWidth();
+    $('.page').hide();
+    LoadingDelay(1200);
+    setTimeout(() => {
+        checkDisplayWidth();
+        setTimeout(() => {
+            $('.page').fadeIn(300);
+        }, 300);
+    }, 1200);
 });
 
 // Khi trang web mới bị thay đổi kích thước:
