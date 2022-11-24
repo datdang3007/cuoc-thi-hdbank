@@ -94,7 +94,7 @@ RenderLoginPage = (layout) => {
         $('body').html(base);
     } else if (layout == "small") {
         var base = `
-            <div class="row row-login-page w-100" style="height: 100vh">
+            <div class="row row-login-page w-100" style="height: 600px">
                 <div class="logo-ct-bank col-12" style="position:absolute; top:0px; left:0px; height: 100px">
                     <div class="img-logo-ctbank-big" style="background-size: 80px;"></div>
                 </div>
