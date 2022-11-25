@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Island+Moments&family=Noto+Sans:ital@0;1&family=Poppins:ital@1&family=Qwitcher+Grypen&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/reset.css">
+    <link rel="stylesheet" href="/dist/css/loginpage.css">
+    <title>CTBank - Đăng Nhập</title>
+</head>
+
+<body>
+
+    <div class="page">
+        <div class="row row-login-page w-100" style="height: 100vh">
+            <div class="logo-ct-bank col-3 h-100">
+                <div class="img-logo-ctbank-big"></div>
+            </div>  
+            <div class="form-login col-9 d-flex align-items-center justify-content-center">
+                <div class="img-decor-form-login">
+                    <p>Cam Kết Lợi Ích Cao Nhất</p>
+                </div>
+                <div class="form-login-content p-5 border rounded">
+                    <div class="header-form-login-content">
+                        <h1 class="title-welcome">CTBank kính chào!</h1>
+                        <span class="title-signup">
+                            Bạn chưa có tài khoản?
+                            <a href="" id="btnRegister">Đăng Ký</a>
+                        </span>
+                    </div>
+
+                    <form action="">
+                        <div class="form-group-login mt-4">
+                            <label class="form-login-label" for="email-login-form">Email</label>
+                            <input type="email" class="form-control form-login-input mt-1" id="email-login-form" placeholder="Nhập email">
+                        </div>
+
+                        <div class="form-group-login mt-3">
+                            <label class="form-login-label" for="password-login-form">Mật Khẩu</label>
+                            <input type="password" class="form-control form-login-input mt-1" id="password-login-form" placeholder="Nhập mật khẩu">
+                        </div>
+
+                        <div class="form-group-checkbox mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="cbRememberme">
+                            <label class="form-check-label form-group-checkbox-rememberme-label" for="cbRememberme">
+                                Ghi nhớ tài khoản
+                            </label>
+                        </div>
+                        
+                        <button type="button" class="btn btn-login-form mt-3">
+                            <i class="fa-solid fa-shield"></i>
+                            Đặng Nhập
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spinner-border loading-animation" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/LoginPage/loginpage.js"></script>
+</body>
+
+</html>

@@ -44,7 +44,6 @@
 
 .row-login-page .form-login .form-login-content {
   position: relative;
-  width: 80%;
   text-align: center;
 }
 
@@ -68,8 +67,7 @@
 }
 
 .row-login-page .form-login .form-login-content form {
-  min-width: 280px;
-  max-width: 530px;
+  width: 530px;
   margin: 0 auto;
 }
 
