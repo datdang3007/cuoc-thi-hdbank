@@ -1,7 +1,5 @@
 var currentType = ''
 
-$('.page').hide();
-
 LoadingDelay = (timeout) => {
     $('.loading-animation').fadeIn(300);
     setTimeout(() => {
