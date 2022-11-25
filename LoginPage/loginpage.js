@@ -12,7 +12,7 @@ AddEvent = () => {
         event.preventDefault();
         $('.page').fadeOut(300);
         setTimeout(() => {
-            window.location.href = '/RegisterPage/registerpage.html'
+            window.location.href = '/registerpage.html'
         }, 300);
     });
 };

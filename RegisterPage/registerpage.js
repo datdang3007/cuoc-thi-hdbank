@@ -10,6 +10,10 @@ LoadingDelay = (timeout) => {
 ContinueRegister = () => {
     $('.form-register-content').hide();
     $('.form-register-content').html(`
+        <button type="button" class="btn-back-register-form mt-2">
+            <i class="fa-regular fa-circle-left"></i>
+        </button>
+
         <div class="header-form-register-content">
             <h1 class="title-welcome">CTBank kính chào!</h1>
             <span class="title-signup">
@@ -19,7 +23,6 @@ ContinueRegister = () => {
         </div>
 
         <form action="">
-        
             <div class="form-group-register mt-4">
                 <label class="form-register-label" for="fullname-register-form">Họ Tên</label>
                 <input type="text" class="form-control form-register-input mt-1" id="fullname-register-form" placeholder="Nhập họ tên">
@@ -53,7 +56,7 @@ AddEvent = () => {
         event.preventDefault();
         $('.page').fadeOut(300);
         setTimeout(() => {
-            window.location.href = '/LoginPage/loginpage.html'
+            window.location.href = '/loginpage.html'
         }, 300);
     });
     $('.btn-continue-register-form').click((event) => {

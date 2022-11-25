@@ -39,6 +39,16 @@
         .form-register-content {
             position: relative;
             text-align: center;
+            .btn-back-register-form {
+                position: absolute;
+                top: 10px;
+                left: 25px;
+                color: rgb(18, 135, 202);
+                border: 0;
+                background: transparent;
+                font-size: 24px;
+                font-family: 'Noto Sans', sans-serif;
+            }
             .header-form-register-content {
                 .title-welcome {
                     color: rgb(17, 84, 161);
@@ -83,6 +93,7 @@
                         font-family: 'Noto Sans', sans-serif;
                     }
                 }
+                
                 .btn-continue-register-form {
                     position: relative;
                     color: #fff;
