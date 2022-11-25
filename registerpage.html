@@ -42,7 +42,22 @@
                         <form action="">
                             <div class="form-group-register mt-4">
                                 <label class="form-register-label" for="phone-register-form">Số Điện Thoại</label>
-                                <input type="number" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 107 && event.keyCode !== 189 && event.keyCode !== 187)" class="form-control form-register-input mt-1" id="phone-register-form" placeholder="Nhập số điện thoại">
+                                <input type="number" min="1" step="1" onkeyup="
+                                    let arr = this.value.split('');
+                                    let correctNumber = [1,2,3,4,5,6,7,8,9,0]
+                                    let correct = false
+                                    for (i in arr) {
+                                        for(j in correctNumber) {
+                                            if (arr[i] == correctNumber[j]) {
+                                                correct = true;
+                                            }
+                                        }
+                                    }
+                                    if (!correct) {
+                                        alert('Số điện thoại có chứa kí tự đặc biệt!');
+                                        this.value = '';
+                                    }"
+                                onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" class="form-control form-register-input mt-1" id="phone-register-form" placeholder="Nhập số điện thoại">
                             </div>
 
                             <div class="form-group-register mt-3">

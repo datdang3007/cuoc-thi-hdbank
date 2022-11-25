@@ -1,5 +1,12 @@
 var currentType = ''
 
+LoadingDelay = (timeout) => {
+    $('.loading-animation').fadeIn(300);
+    setTimeout(() => {
+        $('.loading-animation').fadeOut(300);
+    }, timeout);
+}
+
 AddBtnLogin = () => {
     $('#btnLogin').click((event) => {
         event.preventDefault();
@@ -13,11 +20,13 @@ AddBtnLogin = () => {
 AddBtnContinueRegister = () => {
     $('.btn-continue-register-form').click((event) => {
         event.preventDefault();
-        $('.form-register-content').addClass('runaway');
-        setTimeout(() => {
-            $('.form-register-content').removeClass('runaway');
-            ContinueRegister();
-        }, 700);
+        console.log($('.btn-continue-register-form').parent().children().find('#phone-register-form').val());
+        // if ($('.btn-continue-register-form').parent().children().find('#phone-register-form').html())
+        // $('.form-register-content').addClass('runaway');
+        // setTimeout(() => {
+        //     $('.form-register-content').removeClass('runaway');
+        //     ContinueRegister();
+        // }, 700);
     });
 };
 
@@ -31,13 +40,6 @@ AddBtnBackRegister = () => {
         }, 700);
     });
 };
-
-LoadingDelay = (timeout) => {
-    $('.loading-animation').fadeIn(300);
-    setTimeout(() => {
-        $('.loading-animation').fadeOut(300);
-    }, timeout);
-}
 
 BackRegister = () => {
     $('.form-register-content').hide();
@@ -109,7 +111,23 @@ ContinueRegister = () => {
 
             <div class="form-group-register mt-3">
                 <label class="form-register-label" for="idcard-register-form">CMND/CCCD</label>
-                <input type="number" onkeydown="return (event.keyCode !== 69 && event.keyCode !== 107 && event.keyCode !== 189 && event.keyCode !== 187)" class="form-control form-register-input mt-1" id="idcard-register-form" placeholder="Nhập số CMND/CCCD">
+                <input type="number" min="1" step="1"
+                <input type="number" min="1" step="1" onkeyup="
+                    let arr = this.value.split('');
+                    let correctNumber = [1,2,3,4,5,6,7,8,9,0]
+                    let correct = false
+                    for (i in arr) {
+                        for(j in correctNumber) {
+                            if (arr[i] == correctNumber[j]) {
+                                correct = true
+                            }
+                        }
+                    }
+                    if (!correct) {
+                        alert('Số CMND/CCCD không thể chứa kí tự đặc biệt!');
+                        this.value = '';
+                    }"
+                onkeyup="this.value = parseInt(this.value); this.paste(this.onkeyup);" onkeypress="return event.keyCode === 8 || event.charCode >= 48 && event.charCode <= 57" class="form-control form-register-input mt-1" id="idcard-register-form" placeholder="Nhập số CMND/CCCD">
             </div>
             
             <button type="button" class="btn btn-continue-register-form mt-4">
